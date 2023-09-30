@@ -3,6 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap"
+      rel="stylesheet"
+    />
     <style>
       /* Style for header */
       .header {
@@ -15,13 +25,23 @@
         max-width: 100%;
       }
 
+      .line-division {
+        display: block;
+        margin: 0 auto;
+      }
+
       .navbar-container a {
         /* Style the links inside the navbar */
         color: black;
         text-decoration: none;
-        font-size: 18px;
+        font-size: 24px;
         padding: 10px;
+        font-family: "Space Grotesk", sans-serif;
+        font-weight: bold;
       }
+      /* body {
+        font-family: open-sans;
+      } */
 
       /* Style for container (parent element) */
       .container {
@@ -29,11 +49,25 @@
         align-items: center;
       }
 
-      .button {
-        display: flex;
+      button {
+        display: inline-block;
         align-items: center;
         justify-content: space-between;
-        border-radius: 5px;
+        border-radius: 20px;
+        font-style: open-sans;
+      }
+      .login {
+        background-color: #ffffff;
+        border: 1px solid #000000;
+        color: #0e0e0e;
+        padding: 10px 20px;
+        margin-right: 10px;
+      }
+      .account {
+        background-color: #000000;
+        border: 1px solid #ffffff;
+        color: #ffffff;
+        padding: 10px 20px;
       }
 
       /* Style for the first mobile phone image */
@@ -81,13 +115,14 @@
       <img
         src="./images/reputy iphone mockup 1.svg"
         class="phone1"
-        alt="communication1"
+        alt="iphone1"
       />
       <img
         src="./images/reputy iphone mockup 2 1.svg"
         class="phone2"
-        alt="communication2"
+        alt="iphone2"
       />
+      <img src="./images/Line 3.png" class="line-division" alt="vertical-bar" />
     </div>
   </body>
 </html>
