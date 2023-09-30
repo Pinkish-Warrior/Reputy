@@ -1,10 +1,93 @@
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Reputy Landing Page Task</title>
-    <img src="./images/reputy iphone mockup 1.svg" alt="communication" />
-    <img src="./images/reputy iphone mockup 2 1.svg" alt="communication" />
+    <style>
+      /* Style for header */
+      .header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between; /* Add this to push the navbar to the right */
+      }
+
+      .image {
+        max-width: 100%;
+      }
+
+      .navbar-container a {
+        /* Style the links inside the navbar */
+        color: black;
+        text-decoration: none;
+        font-size: 18px;
+        padding: 10px;
+      }
+
+      /* Style for container (parent element) */
+      .container {
+        display: flex;
+        align-items: center;
+      }
+
+      .button {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-radius: 5px;
+      }
+
+      /* Style for the first mobile phone image */
+      .phone1 {
+        position: absolute; /* Relative positioning within the container */
+        top: 30%; /* Position it at the top of the container */
+
+        left: -12%; /* Position it at the left of the container */
+
+        width: 60%; /* Make it take the full width of the container */
+        height: 50%; /* Make it take half of the container's height */
+        background-image: url("phone1.jpg"); /* Replace 'phone1.jpg' with your image URL */
+        background-size: cover; /* Adjust this as needed */
+      }
+
+      /* Style for the second mobile phone image (overlaid on the first) */
+      .phone2 {
+        position: absolute; /* Relative positioning within the container */
+        top: 34%; /* Position it 50% down from the top of the container */
+        left: -6%; /*P osition it at the left of the container */
+        width: 60%; /* Make it take the full width of the container */
+        height: 50%; /* Make it take half of the container's height */
+        background-image: url("phone2.jpg"); /* Replace 'phone2.jpg' with your image URL */
+        background-size: cover; /* Adjust this as needed */
+      }
+    </style>
   </head>
-  <body></body>
+  <body>
+    <header class="header">
+      <div class="image-container">
+        <img src="./images/Group 58.svg" />
+      </div>
+      <div class="navbar-container">
+        <a href="#">Join Firesides</a>
+        <a href="#">Partner with us</a>
+        <a href="#">Team</a>
+        <a href="#">Blog</a>
+      </div>
+      <div class="navbar-signup">
+        <button class="login">Login</button>
+        <button class="account">Create Account</button>
+      </div>
+    </header>
+    <div class="container">
+      <img
+        src="./images/reputy iphone mockup 1.svg"
+        class="phone1"
+        alt="communication1"
+      />
+      <img
+        src="./images/reputy iphone mockup 2 1.svg"
+        class="phone2"
+        alt="communication2"
+      />
+    </div>
+  </body>
 </html>
