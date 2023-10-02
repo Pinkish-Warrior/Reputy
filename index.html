@@ -88,12 +88,11 @@
       }
 
       button {
-        display: inline;
+        display: flex;
         align-items: center;
         justify-content: space-between;
         border-radius: 20px;
         font-style: open-sans;
-        margin-right: 30px;
       }
       .login {
         background-color: #ffffff;
@@ -150,23 +149,31 @@
       }
 
       .icon img {
-        background: none;
-        display: none;
-        border: none;
-        padding: 0;
+        margin-right: 10px;
       }
 
       .signup {
-        border-radius: 25px;
-        padding: 10.2px 98.2px;
+        display: flex;
         align-items: center;
-        font-family: open-sans;
-        font-size: larger;
+        padding: 10.2px 100.2px;
+        border-radius: 25px;
         font-weight: bold;
-        text-align: center;
         background-color: #000000;
         border: 1px solid #ffffff;
         color: #ffffff;
+        transition: background-color 0.3s ease; /* Smooth background color transition on hover */
+      }
+      /* Media queries for responsiveness */
+      @media screen and (min-width: 768px) {
+        .navbar-container {
+          display: flex;
+          gap: 20px;
+        }
+
+        .line-division {
+          display: block;
+          margin-left: 50%;
+        }
       }
     </style>
   </head>
