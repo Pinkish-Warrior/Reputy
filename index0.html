@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      /* General styles */
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: "Open Sans", sans-serif;
+        background-image: linear-gradient(#ffff, #ece9e6);
+      }
+
+      /* Header styles */
+      .header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px 30px;
+        background-color: #ffff;
+      }
+
+      .image-logo img {
+        max-width: 100%;
+        height: auto;
+      }
+
+      a {
+        /* Style the links inside the navbar */
+        color: #000000;
+        text-decoration: none;
+        font-size: 24px;
+        padding: 10px;
+        font-family: "Space Grotesk";
+        font-weight: bold;
+      }
+
+      button {
+        display: inline-block;
+        gap: 20px;
+        justify-content: space-between;
+        border-radius: 20px;
+
+        font-style: open-sans;
+      }
+
+      .login {
+        background-color: #ffffff;
+        border: 1px solid #000000;
+        color: #0e0e0e;
+        padding: 10px 20px;
+        margin-right: 10px;
+      }
+      .account {
+        background-color: #000000;
+        border: 1px solid #ffffff;
+        color: #ffffff;
+        padding: 10px 20px;
+      }
+
+      /* Main content styles */
+      main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      .container-left {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        width: 100%;
+        margin-bottom: 50%;
+      }
+
+      /* .phone1,
+      .phone2 {
+        width: 100%;
+        max-width: 400px;
+        height: auto;
+      } */
+      /* Style for the first mobile phone image */
+      .phone1 {
+        position: absolute; /* Relative positioning within the container */
+        top: 22%; /* Position it at the top of the container */
+
+        left: -19%; /* Position it at the left of the container */
+
+        width: 75%; /* Make it take the full width of the container */
+        height: 60%; /* Make it take half of the container's height */
+        background-image: url("phone1.jpg"); /* Replace 'phone1.jpg' with your image URL */
+        background-size: cover; /* Adjust this as needed */
+      }
+
+      /* Style for the second mobile phone image (overlaid on the first) */
+      .phone2 {
+        position: absolute; /* Relative positioning within the container */
+        top: 27.5%; /* Position it 50% down from the top of the container */
+        left: -7%; /*P osition it at the left of the container */
+        width: 75%; /* Make it take the full width of the container */
+        height: 60%; /* Make it take half of the container's height */
+        background-image: url("phone2.jpg"); /* Replace 'phone2.jpg' with your image URL */
+        background-size: cover; /* Adjust this as needed */
+      }
+
+      .line-division {
+        display: none;
+      }
+
+      .container-right {
+        flex: 1;
+        text-align: left;
+        padding: 25px;
+        margin-top: auto;
+        margin-left: auto;
+      }
+
+      h1.primary-info {
+        font-size: 4vw;
+        margin-bottom: 20px;
+        margin-left: 45px;
+      }
+
+      h2.secundary-info {
+        font-size: 2vw;
+        margin-bottom: 30px;
+        margin-left: 87px;
+      }
+
+      form {
+        margin-left: 82px;
+        border-radius: 5px;
+        background-color: rgba(0, 0, 0, 0);
+      }
+
+      input[type="text"] {
+        width: 80%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+
+      .signup {
+        display: flex;
+        align-items: center;
+        width: 80%;
+        padding: 12px 25%;
+        font-weight: bold;
+        background-color: #000000;
+        border: none;
+        color: #ffffff;
+        border-radius: 20px;
+        justify-content: center;
+      }
+
+      /* Media queries for responsiveness */
+      @media screen and (min-width: 768px) {
+        .navbar-container {
+          display: flex;
+          gap: 20px;
+        }
+
+        .line-division {
+          display: block;
+          margin-left: 50%;
+        }
+      }
+      p {
+        font-family: "Open Sans", sans-serif;
+        font-size: 0.7vw;
+        padding-top: 1%;
+        margin-left: 28%;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <div class="image-logo">
+        <img src="./images/Group 58.svg" alt="Logo" />
+      </div>
+      <div class="navbar-container">
+        <a href="#">Join Firesides</a>
+        <a href="#">Partner with us</a>
+        <a href="#">Team</a>
+        <a href="#">Blog</a>
+      </div>
+      <div class="navbar-signup">
+        <button class="login">Login</button>
+        <button class="account">Create Account</button>
+      </div>
+    </header>
+    <main>
+      <div class="container-left">
+        <img
+          src="./images/reputy iphone mockup 1.svg"
+          class="phone1"
+          alt="ihone1"
+        />
+        <img
+          src="./images/reputy iphone mockup 2 1.svg"
+          class="phone2"
+          alt="iPhone2"
+        />
+        <img
+          src="./images/Line 3.png"
+          class="line-division"
+          alt="vertical-bar"
+        />
+        <div class="container-right">
+          <h1 class="primary-info">
+            Land the dream <br />
+            by showing your <br />
+            soft skills <br />
+            credentials
+          </h1>
+          <h2 class="secundary-info">Create your <br />free talent wallet</h2>
+          <form action="get">
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Display Name"
+            />
+            <input
+              type="text"
+              id="email"
+              name="email"
+              placeholder="Email address"
+            />
+            <button class="signup">
+              <img
+                class="icon"
+                src="./images/3-Icon_Magic_White 1.png"
+                alt="three icon"
+              />
+              Sign up with email
+            </button>
+            <p>Already have an account? Log in</p>
+          </form>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
