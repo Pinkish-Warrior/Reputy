@@ -14,50 +14,87 @@
       rel="stylesheet"
     />
     <style>
-      /* General styles */
-      * {
-        box-sizing: border-box;
-      }
-
-      body {
-        margin: 0;
-        font-family: "Open Sans", sans-serif;
-        background-image: linear-gradient(#ffff, #ece9e6);
-      }
-
-      /* Header styles */
-      .header {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 20px 30px;
-        background-color: #ffff;
-      }
-
-      .image-logo img {
-        max-width: 100%;
+      /* Style for header */
+      .image-logo {
+        /* max-width: 100%; */
+        max-width: 40vw;
         height: auto;
       }
 
-      a {
+      main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+      }
+
+      .header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between; /* Add this to push the navbar to the right */
+      }
+
+      /* .image {
+        max-width: 50%;
+      } */
+
+      .line-division {
+        grid-column: auto;
+        display: block;
+        margin-left: 50%;
+        max-width: auto;
+      }
+
+      .navbar-container a {
         /* Style the links inside the navbar */
-        color: #000000;
+        color: black;
         text-decoration: none;
         font-size: 24px;
         padding: 10px;
         font-family: "Space Grotesk";
         font-weight: bold;
+        /* max-width: 100%;
+        height: auto; */
+      }
+      /* body {
+        font-family: open-sans;
+      } */
+
+      /* Style for container (parent element) */
+      .container-left {
+        display: flex;
+        /* margin-top: 50px; */
+        align-items: center;
+        width: 70%;
+        margin-bottom: 200px;
+      }
+
+      .container-right {
+        /* display: flex; */
+        margin-left: 10%;
+        font-family: "space grotesk";
+        /* text-align: center; */
+      }
+      /* Place the h1 on top */
+      h1.primary-info {
+        order: 1;
+        font-size: 3.16vw;
+      }
+
+      /* Place the h2 on the bottom */
+      h2.secundary-info {
+        order: 2;
+        font-size: 1.6vw;
       }
 
       button {
-        display: inline-block;
-        gap: 20px;
+        display: flex;
+        align-items: center;
         justify-content: space-between;
         border-radius: 20px;
-
         font-style: open-sans;
       }
-
       .login {
         background-color: #ffffff;
         border: 1px solid #000000;
@@ -72,32 +109,10 @@
         padding: 10px 20px;
       }
 
-      /* Main content styles */
-      main {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-      }
-
-      .container-left {
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        width: 100%;
-        margin-bottom: 50%;
-      }
-
-      /* .phone1,
-      .phone2 {
-        width: 100%;
-        max-width: 400px;
-        height: auto;
-      } */
       /* Style for the first mobile phone image */
       .phone1 {
         position: absolute; /* Relative positioning within the container */
-        top: 22%; /* Position it at the top of the container */
+        top: 15%; /* Position it at the top of the container */
 
         left: -19%; /* Position it at the left of the container */
 
@@ -110,65 +125,45 @@
       /* Style for the second mobile phone image (overlaid on the first) */
       .phone2 {
         position: absolute; /* Relative positioning within the container */
-        top: 27.5%; /* Position it 50% down from the top of the container */
+        top: 22.5%; /* Position it 50% down from the top of the container */
         left: -7%; /*P osition it at the left of the container */
         width: 75%; /* Make it take the full width of the container */
         height: 60%; /* Make it take half of the container's height */
         background-image: url("phone2.jpg"); /* Replace 'phone2.jpg' with your image URL */
         background-size: cover; /* Adjust this as needed */
       }
-
-      .line-division {
-        display: none;
-      }
-
-      .container-right {
-        flex: 1;
-        text-align: left;
-        padding: 25px;
-        margin-top: auto;
-        margin-left: auto;
-      }
-
-      h1.primary-info {
-        font-size: 4vw;
-        margin-bottom: 20px;
-        margin-left: 45px;
-      }
-
-      h2.secundary-info {
-        font-size: 2vw;
-        margin-bottom: 30px;
-        margin-left: 87px;
-      }
-
       form {
-        margin-left: 82px;
         border-radius: 5px;
-        background-color: rgba(0, 0, 0, 0);
+      }
+      input {
+        /* display: inline-block; */
+        width: 123px;
+        border-radius: 5px;
+        padding: 10.2px 125px;
+        margin-bottom: 10px;
+        text-align: left;
+        margin-right: 10px;
       }
 
       input[type="text"] {
-        width: 80%;
-        padding: 10px;
-        margin-bottom: 10px;
-        border: 1px solid #ccc;
-        border-radius: 5px;
+        text-align: left;
+      }
+
+      .icon img {
+        margin-right: 10px;
       }
 
       .signup {
         display: flex;
         align-items: center;
-        width: 80%;
-        padding: 12px 25%;
+        padding: 10.2px 100.2px;
+        border-radius: 25px;
         font-weight: bold;
         background-color: #000000;
-        border: none;
+        border: 1px solid #ffffff;
         color: #ffffff;
-        border-radius: 20px;
-        justify-content: center;
+        transition: background-color 0.3s ease; /* Smooth background color transition on hover */
       }
-
       /* Media queries for responsiveness */
       @media screen and (min-width: 768px) {
         .navbar-container {
@@ -181,18 +176,12 @@
           margin-left: 50%;
         }
       }
-      p {
-        font-family: "Open Sans", sans-serif;
-        font-size: 0.7vw;
-        padding-top: 1%;
-        margin-left: 28%;
-      }
     </style>
   </head>
   <body>
     <header class="header">
       <div class="image-logo">
-        <img src="./images/Group 58.svg" alt="Logo" />
+        <img src="./images/Group 58.svg" />
       </div>
       <div class="navbar-container">
         <a href="#">Join Firesides</a>
@@ -210,12 +199,12 @@
         <img
           src="./images/reputy iphone mockup 1.svg"
           class="phone1"
-          alt="ihone1"
+          alt="iphone1"
         />
         <img
           src="./images/reputy iphone mockup 2 1.svg"
           class="phone2"
-          alt="iPhone2"
+          alt="iphone2"
         />
         <img
           src="./images/Line 3.png"
@@ -224,34 +213,37 @@
         />
         <div class="container-right">
           <h1 class="primary-info">
-            Land the dream <br />
-            by showing your <br />
-            soft skills <br />
-            credentials
+            Land the dream job by showing your soft skils credentials
           </h1>
-          <h2 class="secundary-info">Create your <br />free talent wallet</h2>
+          <h2 class="secundary-info">
+            Create your <br />
+            free talent wallet
+          </h2>
           <form action="get">
-            <input
-              type="text"
-              id="name"
-              name="name"
-              placeholder="Display Name"
-            />
-            <input
-              type="text"
-              id="email"
-              name="email"
-              placeholder="Email address"
-            />
-            <button class="signup">
-              <img
-                class="icon"
-                src="./images/3-Icon_Magic_White 1.png"
-                alt="three icon"
+            <div style="text-align: left">
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Display Name"
               />
-              Sign up with email
-            </button>
-            <p>Already have an account? Log in</p>
+              <br />
+              <input
+                type="text"
+                id="email"
+                name="email"
+                placeholder="Email address"
+              />
+              <br />
+              <button class="signup" style="display: inline-block">
+                <img
+                  class="icon"
+                  src="./images/3-Icon_Magic_White 1.png"
+                  alt="three icon"
+                />
+                Sign up with email
+              </button>
+            </div>
           </form>
         </div>
       </div>
