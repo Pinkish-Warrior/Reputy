@@ -3,6 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -13,186 +15,11 @@
       href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap"
       rel="stylesheet"
     />
-    <style>
-      /* General styles */
-      * {
-        box-sizing: border-box;
-      }
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="./static/style.css" />
 
-      body {
-        margin: 0;
-        font-family: "Open Sans", sans-serif;
-        background-image: linear-gradient(#ffff, #ece9e6);
-        width: auto;
-      }
-
-      /* Header styles */
-      .header {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 20px 30px;
-        background-color: #ffff;
-      }
-
-      .image-logo img {
-        max-width: 40vw;
-        height: auto;
-      }
-
-      a {
-        /* Style the links inside the navbar */
-        color: #000000;
-        text-decoration: none;
-        font-size: 24px;
-        padding: 10px;
-        font-family: "Space Grotesk";
-        font-weight: bold;
-      }
-
-      button {
-        display: inline-block;
-        gap: 20px;
-        justify-content: space-between;
-        border-radius: 20px;
-
-        font-style: open-sans;
-      }
-
-      .login {
-        background-color: #ffffff;
-        border: 1px solid #000000;
-        color: #0e0e0e;
-        padding: 10px 20px;
-        margin-right: 10px;
-      }
-      .account {
-        background-color: #000000;
-        border: 1px solid #ffffff;
-        color: #ffffff;
-        padding: 10px 20px;
-      }
-
-      /* Main content styles */
-      main {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-      }
-
-      .container-left {
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        width: 100%;
-        margin-bottom: 50%;
-      }
-
-      /* Style for the first mobile phone image */
-      .phone1 {
-        /* position: absolute;
-        top: 22%;
-        left: -15%;
-        width: calc(100% - 1000px);
-        height: 45vw;
-        background-image: url("phone1.jpg");
-        background-size: cover; */
-        position: absolute;
-        top: 25%;
-        left: -25%;
-        width: calc(100% - 120px);
-        height: 35vw;
-        background-image: url(phone1.jpg);
-        background-size: cover;
-      }
-
-      /* Style for the second mobile phone image (overlaid on the first) */
-      .phone2 {
-        /* position: absolute;
-        top: 27.5%;
-        left: -11%;
-        width: 75%;
-        height: 60%;
-        background-image: url("phone2.jpg");
-        background-size: cover; */
-        position: absolute;
-        top: 30%;
-        left: -11%;
-        width: calc(100% - 120px);
-        height: 35vw;
-        background-image: url(phone1.jpg);
-        background-size: cover;
-      }
-
-      .line-division {
-        display: none;
-      }
-
-      .container-right {
-        flex: 1;
-        text-align: left;
-        margin-top: 30px;
-      }
-
-      h1.primary-info {
-        font-size: 3.7vw;
-        margin-bottom: 20px;
-        margin-left: 45px;
-      }
-
-      h2.secondary-info {
-        font-size: 2vw;
-        margin-bottom: 30px;
-        margin-left: 87px;
-      }
-
-      form {
-        margin-left: 82px;
-        border-radius: 5px;
-        background-color: rgba(0, 0, 0, 0);
-      }
-
-      input[type="text"] {
-        width: 80%;
-        padding: 10px;
-        margin-bottom: 10px;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-      }
-
-      .signup {
-        display: flex;
-        align-items: center;
-        width: 80%;
-        padding: 12px 25%;
-        font-weight: bold;
-        background-color: #000000;
-        border: none;
-        color: #ffffff;
-        border-radius: 20px;
-        justify-content: center;
-      }
-
-      /* Media queries for responsiveness */
-      @media screen and (min-width: 768px) {
-        .navbar-container {
-          display: flex;
-          gap: 20px;
-        }
-
-        .line-division {
-          display: block;
-          margin-left: 50%;
-        }
-      }
-      p {
-        font-family: "Open Sans", sans-serif;
-        font-size: 1vw;
-        padding-top: 1%;
-        margin-left: 25%;
-      }
-    </style>
+    <!-- Imagens -->
+    <link rel="icon" href="./images/Group 58.svg" />
   </head>
   <body>
     <header class="header">
